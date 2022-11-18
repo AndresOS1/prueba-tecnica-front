@@ -35,7 +35,7 @@ export class HouseServiceService {
     return this.http.post<HauseI>(direccion, form);
   }
 
-  updateHause(id: number | string, form: HauseI) {
+  updateHause(id: number | string | any, form: any) {
     let endpoint = 'Hauses/' + id;
 
     let direccion = this.urlApi + endpoint;

@@ -1,1 +1,74 @@
-<p>update-hause works!</p>
+<!-- <div class="container-lg">
+  <div class="col-12 d-flex justify-content-center mt-3">
+  <div class="d-grid m-auto">
+
+
+  </div>
+</div>
+</div> -->
+<section class="vh-100 gradient-custom xd">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card card1 back1 text-white" style="border-radius: 1rem">
+          <div class="col-md-3 mt-3">
+            <button routerLink="/list-hauses" type="button" class="btn btn1 w-80 offset-1">Volver</button>
+          </div>
+          <div class="card-body p-5 text-center">
+            <div class="mb-md-5 mt-md-4 pb-5">
+              <h2 class="fw-bold mb-2 text-uppercase">Editar Casa</h2>
+              <form [formGroup]="hauseForm" (ngSubmit)="postForm(hauseForm.value)">
+                <div class="col-12 mb-3">
+                  <label for="" class="form-label">Nombre de la Casa</label>
+                  <input type="text" class="form-control" formControlName="nameHause" />
+
+                  <label for="" class="form-label mt-2">Descripcion de la Casa</label>
+                  <input type="text" class="form-control" formControlName="description" />
+
+                  <label for="" class="form-label mt-2">Tiene Servicio de Energia?</label>
+                  <input type="text" class="form-control" formControlName="serviceElectricPower" />
+
+                  <label for="" class="form-label mt-3">Tiene Servicio de Agua?</label>
+                  <input type="text" class="form-control" formControlName="serviceWaterPower" />
+
+
+                  <label for="" class="form-label mt-3"
+                    >Tiene Servicio de Alcantarillado?</label
+                  >
+
+                  <input type="text" class="form-control" formControlName="serviceSewer" />
+
+
+                  <label for="" class="form-label mt-3">Zona</label>
+                  <select class="form-control shadow p-2 mt-2" formControlName="zoneId">
+                    <option value="null" disabled selected>Seleccione una Zona</option>
+                    <option value="{{ zone.id }}" *ngFor="let zone of zoneList">
+                      {{ zone.nameZone }}
+                    </option>
+                  </select>
+
+                  <label for="" class="form-label mt-3">Estado</label>
+                  <select class="form-control shadow p-2 mt-2" formControlName="statusId">
+                    <option value="null" disabled selected>Seleccione un Estado</option>
+                    <option value="{{ status.id }}" *ngFor="let status of statusList">
+                      {{ status.statusName }}
+                    </option>
+                  </select>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-sm-8 mt-2 mb-4">
+                    <button type="submit" name="button" class="btn btn1 w-100">
+                      Actualizar
+                    </button>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

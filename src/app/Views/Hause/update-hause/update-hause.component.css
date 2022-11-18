@@ -1,0 +1,24 @@
+.back1 {
+  background-color: #69A6A4
+}
+.btn1 {
+  background-color: #DC5716;
+  color: #FFFF
+}
+
+.btn1:hover {
+  color: #FFFF
+}
+
+.ini {
+  text-decoration: none;
+  color: #FFFF
+}
+
+.ini:hover {
+  color: #DC5716;
+}
+
+.xd{
+  overflow: scroll;
+}
